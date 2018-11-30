@@ -100,6 +100,19 @@ Then('the result should be {word}', function (expected) {
 
 You can use any other assertion library if you wish. Here is an example using [Chai](http://chaijs.com/):
 
+// Changes //
+Actually the syntax below isn't working. Here is the right one :
+```javascript
+const expect = require('chai').expect
+// or const chai = require('chai')
+// const expect = chai.expect
+
+Then('the result should be {word}', function (expected) {
+  expect(this.actual).to.eql(expected)
+})
+```
+// END CHANGES
+
 ```javascript
 const expect = require('chai')
 
